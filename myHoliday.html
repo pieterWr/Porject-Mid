@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Holiday - Pieter Waruwu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+        --primary-color: #3a4660;
+        --secondary-color: #c06c84;
+        --accent-color: #f67280;
+        --background-color: #f8e5e5;
+        --text-color: #2a2a2a;
+    }
+    
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--background-color);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        flex: 1;
+    }
+    
+    header {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    header h1 {
+        margin-bottom: 15px;
+        font-size: 2.5em;
+        letter-spacing: 2px;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    nav ul li {
+        margin: 0 15px;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+        color: var(--accent-color);
+    }
+    
+    .content-wrapper {
+        display: flex;
+        flex: 1;
+        margin-top: 30px;
+        gap: 30px;
+    }
+    
+    main {
+        flex: 3;
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    aside {
+        flex: 1;
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    footer {
+        background-color: var(--primary-color);
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 30px;
+        box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2, h3, h4, h5, h6 {
+        color: var(--primary-color);
+        margin-bottom: 15px;
+    }
+    
+    /* Homepage styles */
+    .profile-image {
+        max-width: 300px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        border: 5px solid var(--secondary-color);
+    }
+    
+    /* About page styles */
+    .about-image {
+        max-width: 200px;
+        float: right;
+        margin: 0 0 20px 20px;
+        border: 3px solid var(--secondary-color);
+    }
+    
+    /* My Holiday page styles */
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: space-between;
+    }
+    
+    .gallery img {
+        width: calc(33.33% - 10px);
+        transition: transform 0.3s ease;
+    }
+    
+    .gallery img:hover {
+        transform: scale(1.05);
+    }
+    
+    /* Registration page styles */
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    label {
+        font-weight: bold;
+        color: var(--primary-color);
+    }
+    
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+    
+    input:focus, textarea:focus {
+        outline: none;
+        border-color: var(--secondary-color);
+        box-shadow: 0 0 5px rgba(192, 108, 132, 0.5);
+    }
+    
+    button {
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        align-self: flex-start;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+    
+    button:hover {
+        background-color: var(--accent-color);
+    }
+    
+    @media (max-width: 768px) {
+        .content-wrapper {
+            flex-direction: column;
+        }
+    
+        main {
+            margin-bottom: 20px;
+        }
+    
+        .gallery img {
+            width: calc(50% - 7.5px);
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .gallery img {
+            width: 100%;
+        }
+    }
+        </style>
+    
+</head>
+<body>
+    <div class="flex-container">
+        <header>
+            <h1>Pieter Waruwu</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="myHoliday.html">My Holiday</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="content-wrapper">
+            <main>
+                <h2>My Holiday Gallery</h2>
+                <div class="gallery">
+                    <img src="1.jpg" alt="Holiday Image 1">
+                    <img src="2.jpg" alt="Holiday Image 2">
+                    <img src="3.jpg" alt="Holiday Image 3">
+                    <img src="4.jpg" alt="Holiday Image 4">
+                    <img src="5.jpg" alt="Holiday Image 5">
+                    <img src="6.jpg" alt="Holiday Image 6">
+                    <img src="7.jpg" alt="Holiday Image 7">
+                </div>
+            </main>
+            
+            <aside>
+                <h3>Holiday Highlights</h3>
+                <ul>
+                    <li>This holiday is different from the previous holidays, this holiday I prefer to vacation in my <strong>Hometown of Nias</strong>, precisely in the house of my grandparents where I was born. There I learned a lot about the preparation to build a simple and comfortable house.</li>
+                    <li>This holiday is very coincident with my grandparents building a new house that is comfortable to live in, during that vacation I helped them in building a house such as buying <em>construction equipment, house construction materials, and others.</em>I also helped the builders in any case so that the construction of grandparents' houses became faster and helped by the presence of grandchildren who were on vacation in their hometown.</li>
+                    <li>Maybe this is not the vacation that some people want, but this for me is an <strong>additional knowledge, pleasure, and pride in the family, especially</strong> in the family, especially in the home of grandparents. on this vacation I learned that building a house is not easy for workers who earn not so much especially with an elderly age like grandfather, even though I helped after the house was half finished and I helped until it was finished and grandparents made a small worship service as a sign of thanksgiving to God for intervening in every plan and construction process.</li>
+                </ul>
+            </aside>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 Pieter. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
